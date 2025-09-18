@@ -1,0 +1,73 @@
+O que é Stash e Stash Pop de mudanças:
+
+Objetivo:
+    Guardar alterações temporárias.
+
+O que faz:
+    O 'git stash' é um comando do Git que permite guardar temporariamente as alterações não comitadas no seu diretório de trabalho, permitindo que você retorne a um estado de trabalho limpo.
+
+Exemplo de uso:
+    É útil quando você precisa interromper o trabalho atual, mudar para outra tarefa (como corrigir um bug urgente) e depois voltar para onde parou, sem ter que fazer um commit de algo incompleto.
+
+----------------------------------------
+Descrição do fluxo git stash e git stash pop:
+
+1.Edite um arquivo: Você começa fazendo algumas alterações em um arquivo que está sendo rastreado pelo Git. Neste ponto, suas alterações estão no seu diretório de trabalho, mas ainda não foram adicionadas ao staging area (git add) nem comitadas (git commit).
+2.Use git stash: Este comando faz o seguinte:
+    - Salva todas as suas alterações (tanto as preparadas quanto as não preparadas) em um "pilha" de stashes.
+    - Limpa seu diretório de trabalho, retornando-o ao estado do último commit.
+    - Isso permite que você mude de branch ou realize outras operações sem se preocupar em perder o seu trabalho em andamento.
+3.Use git stash pop: Este comando faz duas coisas em um só passo:
+    - Aplica as alterações mais recentes do stash de volta ao seu diretório de trabalho.
+    - Remove essa entrada da pilha de stashes.
+    - Com isso, seu ambiente de trabalho volta a ter as alterações que você havia guardado. 
+
+Exemplo prático:
+
+Vamos seguir a sua descrição passo a passo para ilustrar o processo:
+1.Inicialização:
+    # Crie um novo repositório
+    mkdir projeto-stash
+    cd projeto-stash
+    git init
+
+    # Crie um arquivo e faça o primeiro commit
+    echo "Conteudo inicial" > arquivo.txt
+    git add arquivo.txt
+    git commit -m "Commit inicial do projeto
+
+2.Edite um arquivo:
+    # Faça uma alteração no arquivo, mas não faça commit
+    echo "Alteracao incompleta" >> arquivo.txt
+
+    #Neste ponto, o comando git status mostraria o arquivo.txt como modificado.
+
+3.Use git stash:
+    # Guarde as alterações temporariamente
+    git stash
+
+    #Depois de rodar este comando, seu git status mostrará um diretório de trabalho limpo, pois as alterações foram salvas na pilha de stashes
+
+4.Faça outra tarefa (opcional):
+    # Mude para outra branch para corrigir um bug
+    # git checkout outra-branch
+
+5.Use git stash pop:
+    # Volte para a branch original
+    # git checkout minha-branch
+
+    # Restaure as alterações salvas
+    git stash pop
+
+    #Após este comando, a alteração que você fez no passo 2 (Alteracao incompleta) será reaplicada ao arquivo.txt. Se você não precisar mais daquele stash, o comando pop o remove da pilha. Se preferir manter o stash na pilha para uso futuro, pode usar git stash apply em vez de pop.
+
+----------------------------------------
+Cenários de uso para o git stash
+
+ - Alternância de branches urgente: Você está no meio do desenvolvimento de uma funcionalidade, mas surge um bug crítico que precisa ser corrigido imediatamente na main ou em outra branch. Você não quer comitar um trabalho pela metade, então usa git stash para guardar suas mudanças, muda para a branch de correção, e depois retorna e aplica o stash.
+ 
+ - Limpeza do diretório de trabalho: Você tem um diretório cheio de alterações experimentais que não estão prontas para um commit. Guardar essas alterações com git stash deixa o seu diretório limpo para que você possa focar em outra tarefa.
+ 
+ - Evitar commits prematuros: Se você está trabalhando em uma grande funcionalidade e não quer fazer vários commits pequenos, pode usar o git stash para salvar o seu progresso temporariamente, puxar atualizações do repositório remoto e depois aplicar suas mudanças para continuar de onde parou. 
+
+
