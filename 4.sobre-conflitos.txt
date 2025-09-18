@@ -1,5 +1,5 @@
 Como criar conflito(git) de propósito para resolver localmente?
-  
+    
 Para criar um conflito no Git de propósito e resolvê-lo localmente, você precisa simular um cenário onde dois branches (ramos) fazem alterações conflitantes no mesmo arquivo. 
 Passo 1: Preparar o ambiente
 Crie um novo diretório para o repositório e inicialize o Git:
