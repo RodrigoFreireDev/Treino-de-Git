@@ -1,3 +1,5 @@
+STATUS DE EDIÇÂO["Vou ser guardado temporaria mente via 'git stash' e depois voltar o trabalho via 'git stash pop'"]
+
 O que é Stash e Stash Pop de mudanças:
 
 Objetivo:
