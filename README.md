@@ -60,8 +60,8 @@ Sinta-se à vontade para explorar e testar outros comandos e cenários. ;)
 
 Boa bom treino\!
 
-    ## Autor
-    Este projeto foi desenvolvido por <<!nav>>[Rodrigo Freire]<<!/nav>> <<!nav>>[<<!/nav>>@<<!/nav>>RodrigoFreireDev](https://github.com/RodrigoFreireDev)<<!/nav>>
+## Autor
+Este projeto foi desenvolvido por [Rodrigo Freire](https://github.com/RodrigoFreireDev).
 
 ![mostrando uma imagem, adicionada no Markdown, de um Octocat sorrindo e levantando um tentáculo.](https://myoctocat.com/assets/images/base-octocat.svg)
 
