@@ -57,7 +57,9 @@ Aqui está um exemplo simples de como você pode praticar:
     ```
 
 Sinta-se à vontade para modificar e testar outros comandos e cenários.
+
 Fazer suas próprias anotações é uma ótima forma de fixar o conhecimento.
+
 Treinar sempre é bom ;)
 
 Bom treino\!
