@@ -49,3 +49,26 @@ Arquivos não monitorados:
 
 nenhuma modificação adicionada à submissão (utilize "git add" e/ou "git commit -a")
 
+-------------------------------------------------------------------------------------
+
+rodrigofreire@rodrigo-notebook:~/Documentos/DEV/Estudos/Treino de Git$ git status
+No ramo master
+Changes not staged for commit:
+  (utilize "git add <arquivo>..." para atualizar o que será submetido)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   me-renomei.txt
+
+nenhuma modificação adicionada à submissão (utilize "git add" e/ou "git commit -a")
+rodrigofreire@rodrigo-notebook:~/Documentos/DEV/Estudos/Treino de Git$ git mv me-renomei.txt renomeado.txt
+rodrigofreire@rodrigo-notebook:~/Documentos/DEV/Estudos/Treino de Git$ git status
+No ramo master
+Mudanças a serem submetidas:
+  (use "git restore --staged <file>..." to unstage)
+	renamed:    me-renomei.txt -> renomeado.txt
+
+Changes not staged for commit:
+  (utilize "git add <arquivo>..." para atualizar o que será submetido)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   renomeado.txt
+
+
