@@ -64,8 +64,8 @@ Treinar sempre é bom ;)
 
 Bom treino\!
 
+![mostrando uma imagem, adicionada no Markdown, de um Octocat sorrindo e levantando um tentáculo.](https://myoctocat.com/assets/images/base-octocat.svg)
+
 ## Autor
 [Rodrigo Freire](https://github.com/RodrigoFreireDev).
-
-![mostrando uma imagem, adicionada no Markdown, de um Octocat sorrindo e levantando um tentáculo.](https://myoctocat.com/assets/images/base-octocat.svg)
 
