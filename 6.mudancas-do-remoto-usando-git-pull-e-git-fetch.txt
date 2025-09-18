@@ -1,0 +1,71 @@
+Baixar mudanças do remoto usando git pull e git fetch.
+
+O que é 'git pull' e 'git fetch'?
+  Os comandos git pull e git fetch são usados para baixar atualizações de um repositório remoto para o seu repositório local. A principal diferença é que o git fetch é considerado mais seguro, pois apenas baixa as alterações, enquanto o git pull baixa e automaticamente mescla essas alterações em seu branch local. 
+
+git fetch
+  - Descrição: Baixa todas as atualizações de um repositório remoto (novos branches e commits) para o seu repositório local, mas não as mescla automaticamente.
+  - Vantagem: Permite que você visualize as alterações e decida como incorporá-las, sem modificar imediatamente seu diretório de trabalho. Isso evita conflitos acidentais.
+  - Como funciona:
+    - O git fetch atualiza as referências remotas (por exemplo, origin/main), mas deixa seu branch local (main) inalterado. 
+    - Você pode usar git log main..origin/main para ver as diferenças antes de decidir mesclar.
+
+git pull
+  - Descrição: É a combinação de dois comandos: git fetch e git git merge.
+  - Vantagem: É uma forma rápida de sincronizar seu branch local com o remoto, especialmente quando você tem certeza de que não haverá conflitos.
+  - Como funciona:
+    - Executa um git fetch para baixar os dados remotos.
+    - Em seguida, executa um git merge para mesclar as alterações baixadas no seu branch local.
+    - Se houver alterações pendentes no seu diretório de trabalho, pode causar conflitos de mesclagem, que precisam ser resolvidos manualmente.
+
+----------
+Fluxo de trabalho recomendado
+
+Para ter mais controle e segurança ao baixar as alterações, muitos desenvolvedores seguem este fluxo de trabalho: 
+1. Baixar as alterações com git fetch:
+
+  'git fetch origin'
+  
+  - Sempre comece com git fetch para ver o que há de novo sem comprometer seu trabalho local.
+  
+2. Verificar as mudanças:
+
+  'git diff main origin/main'
+
+  - Compare seu branch local com a versão remota para ver as diferenças(ou substitua main pelo nome do seu branch).
+
+3. Aplicar as mudanças:
+
+  - Se tudo estiver certo, aplique as mudanças no seu branch local.
+  - Se você quiser uma mesclagem automática:
+
+  'git merge origin/main'
+
+  - Se preferir uma abordagem de rebase (que cria um histórico de commits mais linear):
+
+  'git pull --rebase origin main'
+
+  - Se não houver alterações locais, você pode usar git pull diretamente, pois ele fará o fetch e o merge em uma só etapa.
+
+----------
+Resumo das diferenças
+
+git fetch
+  Ação: Apenas baixa as alterações do repositório remoto para o repositório local.	
+  Segurança: Mais seguro. Não modifica seu diretório de trabalho, permitindo que você inspecione as mudanças antes de aplicá-las.	
+  Controle: Oferece mais controle sobre o processo de integração das mudanças.	
+  Cenário: Quando você quer ver o que os outros fizeram sem interromper seu trabalho atual.	
+
+git pull
+  Ação: Baixa e mescla as alterações automaticamente no seu diretório de trabalho.
+  Segurança: Menos seguro. Mescla as alterações imediatamente, podendo causar conflitos inesperados se houver trabalho não comitado.
+  Controle: Menos controle, pois automatiza o processo de mesclagem.
+  Cenário: Quando você está pronto para sincronizar seu branch com o remoto e tem certeza de que não haverá conflitos.
+  
+
+
+  
+
+
+
+
