@@ -7,7 +7,7 @@ Cenário de uso
 
 -----
 
-Como usar git revert:
+#Como usar git revert:
     Passo 1: Encontrar o hash do commit
 
         - Primeiro, você precisa identificar o hash do commit que deseja reverter. Use git log para visualizar o histórico.
@@ -51,8 +51,6 @@ Como usar git revert:
 
         'git push origin main'
 
------
-
 Opções comuns do git revert
 
     git revert HEAD: Reverte o commit mais recente.
@@ -62,44 +60,75 @@ Opções comuns do git revert
 
 -----
 
-##Como usar o git reset?
+#Como usar git reset --hard:
 
-    O comando git reset é usado para desfazer commits e mover o ponteiro da branch atual (HEAD) para um commit anterior. Ele é uma ferramenta poderosa, mas deve ser usada com cuidado, pois pode reescrever o histórico do projeto e causar a perda de dados, especialmente se os commits já tiverem sido enviados para um repositório remoto.
-
-    O git reset possui três modos principais: --soft, --mixed (o padrão) e --hard. A escolha do modo afeta o que acontece com as mudanças depois que o HEAD é movido.
-
-Exemplo de git reset --hard
-
-    Este é o modo mais agressivo e deve ser usado com extrema cautela. Ele descarta todas as alterações feitas após o commit de destino, apagando completamente o histórico e as modificações.
+    - Este é o modo mais agressivo e deve ser usado com extrema cautela. Ele descarta todas as alterações feitas após o commit de destino, apagando completamente o histórico e as modificações.
 
     Cenário: Você fez três commits locais em sua branch main e percebeu que eles contêm erros e prefere começar do zero a partir do estado do projeto antes deles.
 
-Passo 1: Visualize o histórico de commits:
+    Passo 1: Visualize o histórico de commits:
 
-    'git log --oneline'
+        'git log --oneline'
 
-    - Você verá algo como:
+        - Você verá algo como:
 
-    a72ef02 (HEAD -> main) Adiciona nova funcionalidade
-    86bb32e Corrige um bug crítico
-    299b15f Commit inicial
+        a72ef02 (HEAD -> main) Adiciona nova funcionalidade
+        86bb32e Corrige um bug crítico
+        299b15f Commit inicial
 
-Passo 2: Volte três commits atrás com --hard:
+    Passo 2: Volte três commits atrás com --hard:
 
-    'git reset --hard HEAD~3'
+        'git reset --hard HEAD~3'
 
-    - Ou, de forma alternativa, use o hash do commit de destino (299b15f neste caso):
+        - Ou, de forma alternativa, use o hash do commit de destino (299b15f neste caso):
 
-    'git reset --hard 299b15f'
+        'git reset --hard 299b15f'
 
-Passo 3: Verifique o histórico:
 
-    'git log --oneline'
+    Passo 3: Verifique o histórico:
 
-    - O histórico agora mostrará apenas o Commit inicial. Os três commits seguintes foram apagados, e todas as alterações nos arquivos correspondentes a esses commits foram descartadas do diretório de trabalho.
+        'git log --oneline'
 
------
------
+        - O histórico agora mostrará apenas o Commit inicial. Os três commits seguintes foram apagados, e todas as alterações nos arquivos correspondentes a esses commits foram descartadas do diretório de trabalho.
+
+#Como usar git reset --soft:
+
+    - Este modo é menos destrutivo. Ele desfaz os commits, mas mantém as alterações correspondentes na área de staging. Isso permite que você refaça os commits de forma diferente.
+
+    Cenário: Você fez um commit mas percebeu que esqueceu de adicionar um arquivo importante.
+
+    Passo 1: Volte um commit atrás com --soft:
+
+        'git reset --soft HEAD~1'
+
+    Passo 2: Verifique o estado:
+
+        'git status'
+
+        - O resultado mostrará que as alterações do commit anterior voltaram para a área de staging, prontas para um novo commit.
+
+    Passo 3: Adicione o arquivo que faltava e faça o commit novamente:
+
+        'git add arquivo-novo.txt'
+        'git commit -m "Commit com todas as alterações corretas"'
+
+Como usar git reset --mixed:
+
+    - Este é o modo padrão. Ele desfaz os commits e move as alterações para o seu diretório de trabalho, ou seja, remove as alterações da área de staging.
+
+    Cenário: Você fez um commit e percebeu que as alterações deveriam ter sido divididas em dois commits separados.
+
+    Passo 1: Volte um commit com --mixed:
+
+        'git reset HEAD~1'
+
+        - O modo --mixed é o padrão, então não é necessário especificá-lo.
+
+    Passo 2: Verifique o estado:
+
+        'git status'
+
+        - As alterações do commit anterior estarão no seu diretório de trabalho como modificações não preparadas, permitindo que você as adicione e comite novamente da forma desejada.
 
 Quando usar cada modo de git reset?
 
@@ -128,7 +157,4 @@ Diferença entre 'git revert' vs. 'git reset'
         Histórico: Reescreve o histórico, removendo os commits.
         Segurança: Deve ser usado com cautela, especialmente em branches compartilhadas, pois reescrever o histórico pode causar problemas para outros desenvolvedores.
         Uso comum: Limpar o histórico de commits locais antes de enviá-los.
-
-
-
 

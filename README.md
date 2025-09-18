@@ -69,18 +69,3 @@ Bom treino\!
 
 ![mostrando uma imagem, adicionada no Markdown, de um Octocat sorrindo e levantando um tentáculo.](https://myoctocat.com/assets/images/base-octocat.svg)
 
-
-
-
-
-
-bla bla bla
-
-café café café
-
-aaa aaa aaa
-
-bbb bbb bbb
-
-ccc ccc ccc
-
