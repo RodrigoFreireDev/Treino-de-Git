@@ -1,4 +1,4 @@
-s comandos git diff e git show
+Os comandos git diff e git show
 A principal diferença entre os comandos git diff e git show é que o git diff compara as mudanças entre dois estados no seu repositório, enquanto o git show exibe os detalhes de um único objeto Git (como um commit, tag ou blob). 
 git diff
 O comando git diff é uma ferramenta versátil para exibir e comparar as diferenças (o "diff") entre: 
@@ -78,8 +78,19 @@ index 8380486..8df9e8e 100644
 Use o código com cuidado.
 
 Resumo das diferenças
-Característica 	git diff	git show
-Finalidade	Compara dois estados diferentes (ex: área de trabalho e área de preparo, ou dois commits).	Exibe os detalhes de um único objeto Git (geralmente um commit).
-Escopo	Focado na comparação e exibição de diferenças entre múltiplos pontos.	Focado na inspeção de um único ponto na história do projeto.
-Uso comum	Usado para revisar mudanças não confirmadas, comparar branches ou analisar diferenças entre commits.	Usado para inspecionar um commit específico, incluindo sua mensagem, metadados e o próprio diff.
+    git diff
+        Finalidade:
+            	Compara dois estados diferentes (ex: área de trabalho e área de preparo, ou dois commits).
+        Escopo:
+            Focado na comparação e exibição de diferenças entre múltiplos pontos.	
+        Uso comum:
+            Usado para revisar mudanças não confirmadas, comparar branches ou analisar diferenças entre commits.	
+
+    git show
+        Finalidade:
+            Exibe os detalhes de um único objeto Git (geralmente um commit).
+        Escopo:
+            Focado na inspeção de um único ponto na história do projeto.
+        Uso comum:
+            Usado para inspecionar um commit específico, incluindo sua mensagem, metadados e o próprio diff.
 
