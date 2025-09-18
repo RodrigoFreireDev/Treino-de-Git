@@ -1,0 +1,85 @@
+s comandos git diff e git show
+A principal diferença entre os comandos git diff e git show é que o git diff compara as mudanças entre dois estados no seu repositório, enquanto o git show exibe os detalhes de um único objeto Git (como um commit, tag ou blob). 
+git diff
+O comando git diff é uma ferramenta versátil para exibir e comparar as diferenças (o "diff") entre: 
+Seu diretório de trabalho e a área de preparo (staging area): mostras as alterações que ainda não foram adicionadas para o próximo commit.
+sh
+git diff
+Use o código com cuidado.
+
+A área de preparo e o último commit (HEAD): mostra as mudanças que você adicionou à área de preparo (git add), mas ainda não confirmou. O comando --staged ou --cached é usado para isso.
+sh
+git diff --staged
+Use o código com cuidado.
+
+O diretório de trabalho e o último commit (HEAD): mostra todas as mudanças, tanto as que estão na área de preparo quanto as que ainda não foram adicionadas.
+sh
+git diff HEAD
+Use o código com cuidado.
+
+Dois commits, branches ou arquivos específicos: exibe as diferenças entre dois pontos específicos na história do seu projeto.
+sh
+# Comparar entre dois commits
+git diff <commit1> <commit2>
+
+# Comparar entre duas branches
+git diff <branch1>..<branch2>
+Use o código com cuidado.
+
+ 
+Exemplo de saída do git diff
+A saída mostra quais linhas foram removidas (com -) e quais foram adicionadas (com +). 
+diff
+diff --git a/exemplo.txt b/exemplo.txt
+index 8380486..8df9e8e 100644
+--- a/exemplo.txt
++++ b/exemplo.txt
+@@ -1,3 +1,3 @@
+-Esta é a primeira linha.
++Esta é a primeira linha modificada.
+ Esta é a segunda linha.
+ Esta é a terceira linha.
+Use o código com cuidado.
+
+git show
+O comando git show é usado para inspecionar os detalhes de um único objeto Git. Seu uso mais comum é para exibir os detalhes de um commit, incluindo: 
+A mensagem de log.
+O autor, a data e a hash do commit.
+A saída do diff do commit, mostrando o que foi alterado. 
+Uso do git show
+Ver o último commit: sem argumentos, o git show exibe os detalhes do commit mais recente (o HEAD).
+sh
+git show
+Use o código com cuidado.
+
+Ver um commit específico: use a hash do commit para ver seus detalhes.
+sh
+git show <hash-do-commit>
+Use o código com cuidado.
+
+Ver outros objetos: também pode mostrar o conteúdo de tags, árvores de arquivos e blobs. 
+Exemplo de saída do git show para um commit
+sh
+commit 8df9e8e69d7b43a968a35565575514f7b233a596
+Author: Seu Nome <seu.email@exemplo.com>
+Date:   Wed Sep 17 22:30:00 2025 -0300
+
+    Modifica a primeira linha do arquivo exemplo.txt
+
+diff --git a/exemplo.txt b/exemplo.txt
+index 8380486..8df9e8e 100644
+--- a/exemplo.txt
++++ b/exemplo.txt
+@@ -1,3 +1,3 @@
+-Esta é a primeira linha.
++Esta é a primeira linha modificada.
+ Esta é a segunda linha.
+ Esta é a terceira linha.
+Use o código com cuidado.
+
+Resumo das diferenças
+Característica 	git diff	git show
+Finalidade	Compara dois estados diferentes (ex: área de trabalho e área de preparo, ou dois commits).	Exibe os detalhes de um único objeto Git (geralmente um commit).
+Escopo	Focado na comparação e exibição de diferenças entre múltiplos pontos.	Focado na inspeção de um único ponto na história do projeto.
+Uso comum	Usado para revisar mudanças não confirmadas, comparar branches ou analisar diferenças entre commits.	Usado para inspecionar um commit específico, incluindo sua mensagem, metadados e o próprio diff.
+
