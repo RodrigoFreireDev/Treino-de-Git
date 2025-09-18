@@ -56,6 +56,12 @@ Aqui está um exemplo simples de como você pode praticar:
     git push origin minha-nova-feature
     ```
 
-Sinta-se à vontade para explorar e testar outros comandos e cenários.
+Sinta-se à vontade para explorar e testar outros comandos e cenários. ;)
 
-Boa sorte e bom treino\!
+Boa bom treino\!
+
+    ## Autor
+    Este projeto foi desenvolvido por <<!nav>>[Rodrigo Freire]<<!/nav>> <<!nav>>[<<!/nav>>@<<!/nav>>RodrigoFreireDev](https://github.com/RodrigoFreireDev)<<!/nav>>
+
+![mostrando uma imagem, adicionada no Markdown, de um Octocat sorrindo e levantando um tentáculo.](https://myoctocat.com/assets/images/base-octocat.svg)
+
