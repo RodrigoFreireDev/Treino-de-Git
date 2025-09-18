@@ -56,7 +56,7 @@ Aqui está um exemplo simples de como você pode praticar:
     git push origin minha-nova-feature
     ```
 
-Sinta-se à vontade para modificar e testar outros comandos e cenários. Treinar sempre é bom ;)
+Sinta-se à vontade para modificar e testar outros comandos e cenários, Faça suas próprias notas(Fazer as suas próprias anotações ajuda na memorização). Treinar sempre é bom ;)
 
 Boa bom treino\!
 
