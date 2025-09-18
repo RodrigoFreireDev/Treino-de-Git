@@ -1,3 +1,46 @@
 Para adicionar um arquivo chamado nome.txt ao .gitignore, crie um arquivo chamado .gitignore na raiz do seu repositório (se ainda não existir), abra-o num editor de texto e escreva a linha nome.txt para que o Git não rastreie esse arquivo específico. Para adicionar essa mudança ao seu repositório, salve o arquivo .gitignore, e depois use os comandos git add .gitignore e git commit -m "Adiciona nome.txt ao gitignore".
 
+rodrigofreire@rodrigo-notebook:~/Documentos/DEV/Estudos/Treino de Git$ git status
+No ramo master
+Changes not staged for commit:
+  (utilize "git add/rm <arquivo>..." para atualizar o que será submetido)
+  (use "git restore <file>..." to discard changes in working directory)
+	deleted:    README.md~
+
+Arquivos não monitorados:
+  (utilize "git add <arquivo>..." para incluir o que será submetido)
+	.gitignore
+	.gitignore~
+	"1.hist\303\263rico-de-commits.txt"
+	"1.hist\303\263rico-de-commits.txt~"
+	2.criar-.gitignore
+	2.criar-.gitignore~
+	arquivo-para-ignorar1.txt~
+
+nenhuma modificação adicionada à submissão (utilize "git add" e/ou "git commit -a")
+rodrigofreire@rodrigo-notebook:~/Documentos/DEV/Estudos/Treino de Git$ git add .
+rodrigofreire@rodrigo-notebook:~/Documentos/DEV/Estudos/Treino de Git$ git status
+No ramo master
+Mudanças a serem submetidas:
+  (use "git restore --staged <file>..." to unstage)
+	new file:   .gitignore
+	new file:   .gitignore~
+	new file:   "1.hist\303\263rico-de-commits.txt"
+	new file:   "1.hist\303\263rico-de-commits.txt~"
+	new file:   2.criar-.gitignore
+	new file:   2.criar-.gitignore~
+	deleted:    README.md~
+	new file:   arquivo-para-ignorar1.txt~
+
+rodrigofreire@rodrigo-notebook:~/Documentos/DEV/Estudos/Treino de Git$ git commit -m "Adiciona nome.txt ao gitignore"
+[master c703dc1] Adiciona nome.txt ao gitignore
+ 8 files changed, 129 insertions(+), 61 deletions(-)
+ create mode 100644 .gitignore
+ create mode 100644 .gitignore~
+ create mode 100644 "1.hist\303\263rico-de-commits.txt"
+ create mode 100644 "1.hist\303\263rico-de-commits.txt~"
+ create mode 100644 2.criar-.gitignore
+ create mode 100644 2.criar-.gitignore~
+ delete mode 100644 README.md~
+ create mode 100644 arquivo-para-ignorar1.txt~
 
