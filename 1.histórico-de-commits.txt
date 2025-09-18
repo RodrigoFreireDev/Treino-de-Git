@@ -1,0 +1,118 @@
+rodrigofreire@rodrigo-notebook:~$ git -v
+git version 2.43.0
+
+rodrigofreire@rodrigo-notebook:~/Documentos/DEV/Estudos/Treino de Git$ git init
+hint: Using 'master' as the name for the initial branch. This default branch name
+hint: is subject to change. To configure the initial branch name to use in all
+hint: of your new repositories, which will suppress this warning, call:
+hint: 
+hint: 	git config --global init.defaultBranch <name>
+hint: 
+hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+hint: 'development'. The just-created branch can be renamed via this command:
+hint: 
+hint: 	git branch -m <name>
+Repositório vazio Git inicializado em  /home/rodrigofreire/Documentos/DEV/Estudos/Treino de Git/.git/
+
+rodrigofreire@rodrigo-notebook:~/Documentos/DEV/Estudos/Treino de Git$ git status
+No ramo master
+
+No commits yet
+
+Arquivos não monitorados:
+  (utilize "git add <arquivo>..." para incluir o que será submetido)
+	README.md
+	README.md~
+
+nada adicionado ao envio mas arquivos não registrados estão presentes (use "git add" to registrar)
+rodrigofreire@rodrigo-notebook:~/Documentos/DEV/Estudos/Treino de Git$ git add .
+rodrigofreire@rodrigo-notebook:~/Documentos/DEV/Estudos/Treino de Git$ git status
+No ramo master
+
+No commits yet
+
+Mudanças a serem submetidas:
+  (utilize "git rm --cached <arquivo>..." para não apresentar)
+	new file:   README.md
+	new file:   README.md~
+
+rodrigofreire@rodrigo-notebook:~/Documentos/DEV/Estudos/Treino de Git$ git commit -m "primeiro commit do treino"
+[master (root-commit) d275b13] primeiro commit do treino
+ 2 files changed, 122 insertions(+)
+ create mode 100644 README.md
+ create mode 100644 README.md~
+
+
+AQUI(Vendo o histórico):
+rodrigofreire@rodrigo-notebook:~/Documentos/DEV/Estudos/Treino de Git$ git log
+commit d275b13de9c9c6c270c23155ffe549334a6e38f8 (HEAD -> master)
+Author: RodrigoFreireDev <rodrigo.freire.dev@gmail.com>
+Date:   Wed Sep 17 21:27:13 2025 -0300
+
+    primeiro commit do treino
+
+ -------------------------------------
+Para ver o histórico de commits no seu projeto Git, você vai usar o comando `git log`. Ele é a ferramenta mais fundamental para isso.
+
+### O Comando `git log`
+
+Quando você simplesmente digita `git log` no terminal, ele exibe uma lista detalhada de todos os commits do repositório, em ordem cronológica inversa (do mais recente para o mais antigo).
+
+A saída padrão mostra:
+
+  * Um **hash** (ID único do commit)
+  * O **autor**
+  * A **data e hora** do commit
+  * A **mensagem** do commit
+
+Para navegar na lista, use as setas do teclado. Pressione `Q` para sair.
+
+### Opções Úteis para `git log`
+
+O `git log` tem várias opções para personalizar a visualização. Aqui estão as mais usadas:
+
+-----
+
+#### `git log --oneline`
+
+Mostra cada commit em uma única linha, com um hash resumido e a mensagem do commit. É perfeito para uma visão geral rápida.
+
+```bash
+git log --oneline
+```
+
+-----
+
+#### `git log --graph --oneline --decorate`
+
+Essa é uma das opções mais poderosas. Ela mostra um **gráfico** da estrutura das branches e merges, junto com as informações de cada commit em uma linha (`--oneline`) e marca as branches e tags (`--decorate`).
+
+```bash
+git log --graph --oneline --decorate
+```
+
+-----
+
+#### `git log -p`
+
+Mostra o histórico de commits com as diferenças (`diff`) de cada arquivo alterado. Use essa opção quando quiser ver exatamente o que mudou em cada commit.
+
+```bash
+git log -p
+```
+
+-----
+
+#### `git log --author="Nome do Autor"`
+
+Filtra o histórico para mostrar apenas os commits de um autor específico.
+
+```bash
+git log --author="Seu Nome"
+```
+
+-----
+
+Lembre-se, você pode combinar várias opções para obter a visualização que precisa. Experimente-as no seu projeto "Treino de Git" para ver a diferença que cada uma faz\!
+ 
+ 
