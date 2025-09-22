@@ -1,0 +1,61 @@
+# Como usar Cherry-pick de commits
+
+O git cherry-pick é um comando que permite copiar um commit específico de uma branch para outra. É útil para reaproveitar o código de um único commit, como uma correção de bug urgente ou uma funcionalidade pequena, sem precisar mesclar toda a branch de origem.
+
+## Cenário de uso
+
+- Imagine que você tem uma branch feature/login com vários commits de desenvolvimento, mas um deles, que corrige um bug no botão de login, precisa ser aplicado imediatamente no branch main. Você pode usar o cherry-pick para mover apenas esse commit específico.
+
+### Passo a passo para usar git cherry-pick
+
+1. Identifique o commit que deseja copiar.
+
+- Primeiro, mude para a branch que contém o commit que você quer reaproveitar (por exemplo, feature/login). Em seguida, use git log para encontrar o hash (SHA-1) do commit.
+
+    `sh 
+        git log --oneline
+
+- O comando irá mostrar uma lista de commits como esta:
+
+    ```
+        b5cab82 Atualiza feature A
+        5c54dec Corrige erro de digitação no recurso A
+        01a6f8b Adiciona feature A
+
+- Neste exemplo, o hash que você precisa copiar é hash de Atualiza feature A.
+
+2. Mude para a branch de destino.
+
+- Vá para a branch onde você quer aplicar o commit copiado (por exemplo, main).
+
+    `sh
+        git checkout main
+
+3. Use git cherry-pick para copiar o commit.
+
+- Agora, execute o comando cherry-pick usando o hash que você identificou.
+
+    `sh
+        git cherry-pick b5cab82
+
+- O Git tentará aplicar as mudanças do commit 5c54dec na branch main. Um novo commit será criado na main com as mesmas alterações e a mesma mensagem do commit original.
+
+4. Resolva conflitos (se necessário).
+
+Se houver conflitos durante a aplicação das mudanças, o Git irá pausar o processo.
+* Edite os arquivos que apresentam conflito.
+* Adicione as alterações resolvidas ao staging area (git add .).
+* Continue o processo com git cherry-pick --continue.
+
+5. Envie as alterações para o repositório remoto.
+
+- Após o cherry-pick ser concluído com sucesso, as alterações estão na sua branch local. Você pode enviá-las para o repositório remoto.
+
+    `sh
+        git push origin main
+
+### Vantagens do git cherry-pick
+
+* Precisão: Copia apenas o commit necessário, sem trazer outras alterações ou a complexidade de um merge ou rebase.
+* Aplicações específicas: Ideal para aplicar correções urgentes em diferentes branches de produção ou para copiar um recurso de um branch temporário.
+* Evita conflitos desnecessários: Reduz a chance de conflitos que poderiam ocorrer ao mesclar todo um branch que contém várias alterações que ainda não estão prontas.
