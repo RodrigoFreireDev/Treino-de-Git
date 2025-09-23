@@ -103,3 +103,4 @@
 * Eficiência: A busca binária reduz o número de commits a serem testados exponencialmente, tornando o processo rápido, mesmo em históricos longos. 
 * Precisão: Permite identificar o commit exato onde um problema foi introduzido.
 
+
