@@ -104,3 +104,4 @@
 * Precisão: Permite identificar o commit exato onde um problema foi introduzido.
 
 
+
