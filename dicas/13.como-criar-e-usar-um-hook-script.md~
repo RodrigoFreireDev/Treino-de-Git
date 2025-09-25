@@ -24,13 +24,13 @@
 
 - Abra o arquivo pre-commit em um editor de texto e adicione o script que será executado. Para simplesmente imprimir uma mensagem, use o seguinte código:
 
-    ```
+    ``
         #!/bin/sh
         echo "Executando o hook de pre-commit..."
 
 'OU' sejá criativo :)
 
-    ```
+    ``
         #!/bin/sh
         echo -e '\033[31;42m TREINO DE GIT: Executando o hook de pre-commit...\033[0m'
 
