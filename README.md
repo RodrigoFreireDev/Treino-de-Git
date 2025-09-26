@@ -69,4 +69,3 @@ Bom treino\!
 
 ## Autor
 [Rodrigo Freire](https://github.com/RodrigoFreireDev).
-
