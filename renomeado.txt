@@ -1,3 +1,5 @@
+#AQUI UMA CORREÇÂO VIA worktree 
+
 Para renomear um arquivo num repositório Git, utilize o comando git mv seguido do nome antigo e do novo nome do arquivo, por exemplo: git mv nome_antigo.txt novo_nome.txt. Este comando move o arquivo e adiciona a alteração ao "staging area", para que possa fazer o commit e salvar o histórico corretamente. 
 Como Renomear um Arquivo com git mv 
 Abra o terminal: no diretório do seu repositório Git.
