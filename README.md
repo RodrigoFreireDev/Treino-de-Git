@@ -62,9 +62,7 @@ Sinta-se à vontade para modificar e testar outros comandos e cenários.
 
 Fazer suas próprias anotações é uma ótima forma de fixar o conhecimento.
 
-Treinar sempre é bom ;)
-
-Bom treino\!
+Treinar sempre é a chave para o domínio! 🚀
 
 <!--![mostrando uma imagem, adicionada no Markdown, de um Octocat sorrindo e levantando um tentáculo.](https://myoctocat.com/assets/images/base-octocat.svg)-->
 ![mostrando uma imagem, adicionada no Markdown, de um Octocat sorrindo e levantando um tentáculo.](img/octocat.svg)
