@@ -30,6 +30,8 @@ Lembre-se de substituir `SEU_USUARIO` pelo seu nome de usuário do GitHub.
 
 ### 3\. Comece a Praticar
 
+Cumpra os desafios do arquivo ***Lista_de_Desafios.md*** (o arquivo está na raiz desse projeto).
+
 Agora você está pronto\! Adicione novos arquivos, faça commits, crie branches e experimente os comandos que você está aprendendo.
 
 -----
