@@ -12,7 +12,9 @@ O objetivo principal deste projeto é servir como um ambiente de testes seguro p
 
 ## Como Usar
 
-Siga os passos abaixo para começar a usar este repositório para o seu aprendizado.
+Siga os passos abaixo para começar a usar este repositório e cumpra os **30 desafios** propostos.
+
+Os desafios foram separados em **10 básicos**, **10 intermediários** e **10 avançados**.
 
 ### 1\. Faça um Fork
 
