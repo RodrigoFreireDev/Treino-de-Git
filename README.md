@@ -70,5 +70,4 @@ Treinar sempre é a chave para o domínio! 🚀
 ![mostrando uma imagem, adicionada no Markdown, de um Octocat sorrindo e levantando um tentáculo.](img/octocat.svg)
 
 ## Autor
-Rodrigo
-
+[Rodrigo Freire](https://github.com/RodrigoFreireDev).
